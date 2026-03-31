@@ -2,41 +2,81 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feliz Páscoa ❤️</title>
+
   <style>
     body {
-      background: linear-gradient(#ffe6f0, #fff);
+      margin: 0;
+      padding: 10px;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
       text-align: center;
       font-family: Arial, sans-serif;
     }
 
     h1 {
       color: #ff4d88;
+      font-size: 28px;
+      margin-top: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      color: #ff6699;
     }
 
     .card {
       background: white;
       padding: 20px;
-      margin: 30px auto;
+      margin: 20px auto;
       border-radius: 15px;
-      width: 80%;
+      width: 90%;
+      max-width: 500px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     video {
       width: 100%;
       border-radius: 10px;
+      margin-top: 10px;
     }
 
-    .coração {
+    .coracao {
       font-size: 30px;
+      margin-top: 20px;
       animation: pulse 1s infinite;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d88;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff1a66;
     }
 
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.2); }
       100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -47,29 +87,39 @@
 
   <div class="card">
     <p>
-      Eu sei que esse não seria o melhor de páscoa para você, mas mesmo eu não te dando uma cesta de chocolates, faço algo a mão mesmo, para te mostrar 
-      que você é muito especial na minha vida, e eu te quero nela para sempre 💕
+      Eu sei que esse não seria o melhor de Páscoa para você, mas mesmo eu não te dando uma cesta de chocolates, fiz algo à mão mesmo, para te mostrar que você é muito especial na minha vida, e eu te quero nela para sempre 💕
     </p>
   </div>
 
   <div class="card">
-    <h2>Eu & você 💕</h2> <p>uma vez você me falou que me dedicaria todas as músicas desse cantor, e eu nunca esqueci disso, dessa vez saiba que eu te dedico essa, junto a esses incríveis momentos que eu ja vivi com você, e quero viver muito mais ainda.
+    <h2>Eu & você 💕</h2>
+    <p>
+      Uma vez você me falou que me dedicaria todas as músicas desse cantor, e eu nunca esqueci disso.  
+      Dessa vez, saiba que eu te dedico essa, junto a esses incríveis momentos que eu já vivi com você — e quero viver muito mais ainda 💖
     </p>
+
     <video controls>
       <source src="video.emily.mp4" type="video/mp4">
       Seu navegador não suporta vídeo.
     </video>
+
+    <button onclick="mostrarMensagem()">Clique aqui 💌</button>
   </div>
 
   <div class="card">
     <p>
       Que nossa história fique cada vez mais incrível.  
-      Eu te amo muito amor da minha vida❤️
+      Eu te amo muito, amor da minha vida ❤️
     </p>
   </div>
 
-  <div class="coração">❤️ ❤️ ❤️</div>
+  <div class="coracao">❤️ ❤️ ❤️</div>
+
+  <script>
+    function mostrarMensagem() {
+      alert("Você é a melhor parte da minha vida 💖🐰");
+    }
+  </script>
 
 </body>
 </html>
-
